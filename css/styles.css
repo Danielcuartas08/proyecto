@@ -1,0 +1,549 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Encabezado */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Sección Principal */
+#inicio {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#inicio h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#inicio p {
+  font-size: 18px;
+}
+
+/* Sección de Productos */
+#productos {
+  padding: 20px;
+  text-align: center;
+}
+
+#productos h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.productos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 410px;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.producto p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.producto button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.producto button:hover {
+  background-color: #555;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Estilos contacto */
+.contact-page .contact-container {
+  background: #fff;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.contact-page .contact-container h2 {
+  background: #fff;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.contact-page .contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--blue-dark);
+}
+
+.contact-page .contact-container p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.contact-page .contact-container form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-page .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-page .form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-page .form-group input,
+.contact-page .form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-page .boton-principal {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Contenedor común */
+.auth-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-container .login-container,
+.auth-container .register-container {
+  position: relative;
+}
+
+/* Botones login y registro*/
+.boton-login,
+.boton-register {
+  background: var(--blue-dark);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.boton-login:hover,
+.boton-register:hover {
+  background: #003366;
+}
+
+/* Dropdown options */
+.login-options,
+.register-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-options a,
+.register-options a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background 0.15s;
+}
+
+.login-options a:hover,
+.register-options a:hover {
+  background: #f4f4f4;
+}
+
+/* Mostrar menu al hover */
+.login-container:hover .login-options,
+.register-container:hover .register-options {
+  display: block;
+}
+
+/* Contenedor de Autenticación */
+.auth-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Botones de Login / Registro */
+.boton-login,
+.boton-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--blue-dark);
+  border: 2px solid var(--blue-dark);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.boton-login:hover,
+.boton-register:hover {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Dropdown genérico */
+.login-options,
+.register-options {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+/* Enlaces dentro del dropdown */
+.login-options a,
+.register-options a {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--blue-dark);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.login-options a:hover,
+.register-options a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mostrar dropdown al hover */
+.login-container:hover .login-options,
+.register-container:hover .register-options {
+  display: flex;
+}
+
+/* ===== Profesionalizando el form de Registro Cliente ===== */
+.register-page .register-container {
+  background: #ffffff;
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+.register-page .register-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.75rem;
+  color: var(--blue-dark);
+  text-align: center;
+  position: relative;
+}
+
+.register-page .register-container h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--blue-dark);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.register-page .register-container .form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.register-page .register-container .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.register-page .register-container .form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #fafafa;
+}
+
+.register-page .register-container .form-group input:focus {
+  border-color: var(--blue-dark);
+  box-shadow: 0 0 0 4px rgba(0, 75, 150, 0.1);
+  background: #fff;
+  outline: none;
+}
+
+.register-page .register-container .form-group input::placeholder {
+  color: #999;
+}
+
+.register-page .register-container .boton-registro {
+  display: block;
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 0.75rem;
+  background: linear-gradient(135deg, var(--blue-dark), #0059b3);
+  color: #000000;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-page .register-container .boton-registro:hover {
+  background: linear-gradient(135deg, #0059b3, var(--blue-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.register-page .register-container .boton-registro:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Interfaz de Inicio de Sesión Cliente ===== */
+.login-page {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page .login-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.login-page .login-container h2 {
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.login-page .login-container h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--blue-dark);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.login-page .login-container .form-group {
+  margin-bottom: 1.25rem;
+}
+.login-page .login-container .form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.95rem;
+}
+.login-page .login-container .form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.login-page .login-container .form-group input:focus {
+  border-color: var(--blue-dark);
+  box-shadow: 0 0 0 4px rgba(0, 75, 150, 0.1);
+  background: #fff;
+  outline: none;
+}
+
+.login-page .login-container .boton-principal {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.75rem;
+  background: linear-gradient(135deg, var(--blue-dark), #0059b3);
+  color: #181818;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+.login-page .login-container .boton-principal:hover {
+  background: linear-gradient(135deg, #0059b3, var(--blue-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.login-page .login-container .boton-principal:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.login-page .login-container .form-msg {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  min-height: 1.2em;
+}
+
+/* Animación compartida */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-page .login-container {
+    margin: 1.5rem 1rem;
+    padding: 2rem 1rem;
+  }
+  .login-page .login-container h2 {
+    font-size: 1.5rem;
+  }
+  .login-page .login-container .boton-principal {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+.client-greeting {
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.75rem;
+  align-self: center; /* para que quede centrado verticalmente */
+}

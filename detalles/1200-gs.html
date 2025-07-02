@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BMW R 1200 GS</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body class="detail-page">
+  <!-- Este wrapper crea el fondo borroso -->
+  <div class="detail-wrapper" style="background-image: url('../images/bmwfondo.jpg')">
+    <!-- Este overlay, si quieres más oscuridad -->
+    <div class="detail-overlay"></div>
+
+    <!-- Contenedor principal -->
+    <main class="detail-container">
+      <a href="../index.html" class="boton-volver">
+        <span class="arrow">←</span> Volver
+      </a>
+
+      <h1>BMW R 1200 GS</h1>
+      <img src="../images/bmw1200.jpg" alt="BMW R 1200 GS" class="producto__imagen">
+
+      <p>Trail adventure: motor bóxer 1.170 cc, suspensiones de largo recorrido, electrónica avanzada.</p>
+      <h2>1.170 cc, 125 CV, 125 Nm, 249 kg, ABS Pro, modos Rain/Road/Dynamic.</h2>
+
+      <!-- Galería de 3 imágenes -->
+      <div class="gallery">
+        <img src="../images/bmwcostado.jpg" alt="Vista lateral">
+        <img src="../images/bmwmotor.jpg" alt="Detalle motor">
+        <img src="../images/bmwcomandos.jpg" alt="Panel TFT">
+      </div>
+    </main>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Ampliación">
+  </div>
+  <script src="../js/lightbox.js"></script>
+</body>
+
+</html>
